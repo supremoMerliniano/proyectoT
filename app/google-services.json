@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "603449374262",
+    "project_id": "fir-tutorial-1713d",
+    "storage_bucket": "fir-tutorial-1713d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603449374262:android:7490ad851920c49251ca97",
+        "android_client_info": {
+          "package_name": "com.danirod.firebasetutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603449374262-4t9gh5uie9a0dbg1e7papb1itibf08kh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4mpe14v-SZJ9qBM45SkF4dRdcIn-SuhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603449374262-4t9gh5uie9a0dbg1e7papb1itibf08kh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
