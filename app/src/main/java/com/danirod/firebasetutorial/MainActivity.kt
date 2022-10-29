@@ -2,7 +2,6 @@ package com.danirod.firebasetutorial
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 
@@ -12,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val prueba = PruebaElementos()
+
         val etNombre = findViewById<EditText>(R.id.etNombre)
         val etaPa = findViewById<EditText>(R.id.etaPa)
         val etaMa = findViewById<EditText>(R.id.etaMa)

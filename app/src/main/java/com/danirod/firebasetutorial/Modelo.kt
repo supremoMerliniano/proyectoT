@@ -1,12 +1,12 @@
 package com.danirod.firebasetutorial
 
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
 
 class Modelo: AppCompatActivity() {
-    val firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
+    private val firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
+    private val listaUsuarios = mutableMapOf<String, Any>()
 
     fun addFirestore(usuario: MutableMap<String, Any>) {
         var error = false
@@ -24,15 +24,18 @@ class Modelo: AppCompatActivity() {
     }
 
     fun retrieveData() {
-        val docs = firestore.collection("clientes").get()
+        firestore.collection("clientes").get()
             .addOnSuccessListener { result ->
                 for (document in result) {
                     Log.d("MSG", "${document.id} => ${document.data}")
+                    listaUsuarios[document.id] = "${document.data}"
                 }
             }
             .addOnFailureListener { exception ->
                 Log.d("MSG", "Error getting documents: ", exception)
             }
+
+        Log.i("Fire", "$listaUsuarios")
     }
 
 

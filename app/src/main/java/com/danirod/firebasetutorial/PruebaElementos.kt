@@ -6,9 +6,20 @@ class PruebaElementos {
     private fun String.isOnlyLetter() = all { it.isLetter() }
     private fun String.isNumeric() = all { it.isDigit() }
 
-    fun nombres(str: String): String = if (!str.isOnlyLetter() || str == "") "Valor erróneo" else str
-        .lowercase().replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() }
+    fun nombres(str: String): String {
+        return if (!str.isOnlyLetter() || str == "" || str.length >= 40)
+            "Valor erróneo"
+        else
+            str.lowercase().replaceFirstChar {
+            if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString()
+        }
+    }
 
-    fun telefono(str: String): String = if (!str.isNumeric() || str == "") "Valor erróneo" else str
+    fun telefono(str: String): String {
+        return if (!str.isNumeric() || str == "" || str.length >= 10)
+            "Valor erróneo"
+        else
+            str
+    }
 
 }
